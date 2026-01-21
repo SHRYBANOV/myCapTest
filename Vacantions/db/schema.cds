@@ -17,15 +17,16 @@ type  ze_useddays: Decimal(5, 2);
 type  ze_remainingdays: Decimal(5, 2);
 type  ze_startdate: Date;
 type  ze_enddate: Date;
-type ze_status: String(4);
-type ze_reason: String(255);
+type  ze_status: String(4);
+type  ze_reason: String(255);
 
 
 
 entity Employee : cuid, managed {
   key employeeid : UUID not null;
-  emplmanager    : Association to many EmplManager on emplmanager.employeeid = $self.employeeid;
-  vacbalances    : Association to many vacbalances on vacbalances.employeeid = $self.employeeid;
+  emplmanager    : Association to many EmplManager on emplmanager.employeeid = $self;
+  vacbalances    : Association to many Vacbalances on vacbalances.employeeid = $self;
+  vacrequest     : Association to many VacRequest on vacrequest.employeeid = $self;
   firstname      : ze_firstname;
   lastname       : ze_lastname;
   email          : ze_email;
@@ -42,7 +43,7 @@ entity EmplManager: cuid, managed {
   validto       : ze_validto;
   isprimary     : ze_isprimary;
 }
-entity vacbalances : cuid, managed {
+entity Vacbalances : cuid, managed {
   key vbal      : UUID not null;
   employeeid    : Association to Employee;
   vacationtype  : ze_vacationtype;
@@ -51,7 +52,7 @@ entity vacbalances : cuid, managed {
   useddays      : ze_useddays;
   remainingdays : ze_remainingdays;
 }
-entity vacrequest : cuid, managed {
+entity VacRequest : cuid, managed {
   key req      : UUID not null;
   employeeid   : Association to Employee;
   vacationtype : ze_vacationtype;
