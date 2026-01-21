@@ -1,6 +1,6 @@
-managerid,ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
-86073019-b160-4af7-9655-714f6535c13b,86073025-0f5b-442a-b673-f668923dc288,2014-01-16,2009-04-03,true,2006-02-12T00:00:00.000Z,createdBy.ig56@example.net,2017-02-02T00:00:00.000Z,modifiedBy.ig56@example.org
-10454899-dbd0-45bd-b60a-35063be26ed3,10454899-19c0-40dc-8793-f1419d3a90d6,2021-07-05,2019-01-27,false,2023-08-09T00:00:00.000Z,createdBy.6831v@example.com,2013-10-17T00:00:00.000Z,modifiedBy.6831v@example.com
-10454900-5b3a-42af-b50d-941bc2bc3a99,10454900-cc6d-42f9-aa4c-a6f09b63cbba,2003-11-08,2015-08-08,true,2021-12-15T00:00:00.000Z,createdBy.6831w@example.net,2011-04-13T00:00:00.000Z,modifiedBy.6831w@example.com
-10454901-e41b-4ba8-97e8-9044b2da2742,10454901-57ed-4ae6-b4dc-998f422a661b,2021-10-28,2010-09-03,false,2007-06-30T00:00:00.000Z,createdBy.6831x@example.net,2000-08-12T00:00:00.000Z,modifiedBy.6831x@example.org
-10454902-ac09-40f8-a241-1cad6213b7f5,10454902-c508-4eae-858d-e56c169947b7,2018-06-08,2004-12-26,true,2017-07-02T00:00:00.000Z,createdBy.6831y@example.net,2022-10-18T00:00:00.000Z,modifiedBy.6831y@example.net
+ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
+3794641e-760c-4a66-aebd-a4a27416d7a9,2008-12-03,2007-12-27,false,2020-02-25T00:00:00.000Z,createdBy.29byp@example.org,2011-02-05T00:00:00.000Z,modifiedBy.29byp@example.com
+31668709-80b3-4441-93ca-e47d4453671d,2002-10-02,2011-12-17,false,2021-04-19T00:00:00.000Z,createdBy.iurqd@example.com,2011-06-21T00:00:00.000Z,modifiedBy.iurqd@example.org
+31668710-592e-49ba-976d-8c391c501c0f,2021-09-29,2002-03-10,true,2010-08-21T00:00:00.000Z,createdBy.iurqe@example.net,2014-10-04T00:00:00.000Z,modifiedBy.iurqe@example.com
+31668711-45cd-44ae-b444-39b998b8db3c,2010-08-24,2008-04-21,false,2020-01-14T00:00:00.000Z,createdBy.iurqf@example.org,2019-07-05T00:00:00.000Z,modifiedBy.iurqf@example.org
+31668712-11f8-4ba9-9a4f-3d8ba2df22de,2000-10-20,2020-01-25,true,2007-07-02T00:00:00.000Z,createdBy.iurqg@example.net,2004-02-23T00:00:00.000Z,modifiedBy.iurqg@example.org
