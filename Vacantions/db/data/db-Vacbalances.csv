@@ -1,6 +1,6 @@
-ID,employeeid_ID,employeeid_employeeid,vacationtype,zyear,entitleddays,useddays,remainingdays,createdAt,createdBy,modifiedAt,modifiedBy
-17153331-fe00-4801-af27-f90842985aed,47132414-b7c0-4ce4-b16b-fcbc1e67bda4,47132418-5024-4bd1-83a1-21bfa6ebab14,3331,3331,337.26,805.24,2.26,2016-09-12T00:00:00.000Z,createdBy.a7nlf@example.com,2012-03-31T00:00:00.000Z,modifiedBy.a7nlf@example.net
-11517248-36aa-468f-996f-6bf1e89458a5,47132458-1457-4c45-803c-abde7e890fd0,4713245e-f2e3-406a-9c13-c9a64fb8f311,7248,7248,971.65,140.25,217.61,2000-01-05T00:00:00.000Z,createdBy.6uurk@example.com,2016-09-10T00:00:00.000Z,modifiedBy.6uurk@example.com
-11517249-638c-4fbb-ae61-c4552061f0a3,47132458-1457-4c45-803c-abde7e890fd0,4713245e-f2e3-406a-9c13-c9a64fb8f311,7249,7249,736.04,937.46,37.32,2002-10-14T00:00:00.000Z,createdBy.6uurl@example.net,2010-12-14T00:00:00.000Z,modifiedBy.6uurl@example.com
-11517250-166c-451d-892e-36e304e0af77,47132458-1457-4c45-803c-abde7e890fd0,4713245e-f2e3-406a-9c13-c9a64fb8f311,7250,7250,200.56,850.7,935.25,2021-03-04T00:00:00.000Z,createdBy.6uurm@example.org,2023-02-23T00:00:00.000Z,modifiedBy.6uurm@example.com
-11517251-e95d-4dbe-bef3-02db43c7504a,47132458-1457-4c45-803c-abde7e890fd0,4713245e-f2e3-406a-9c13-c9a64fb8f311,7251,7251,941.7,203.97,620.47,2013-05-04T00:00:00.000Z,createdBy.6uurn@example.org,2001-02-19T00:00:00.000Z,modifiedBy.6uurn@example.org
+ID,vacationtype,zyear,entitleddays,useddays,remainingdays,createdAt,createdBy,modifiedAt,modifiedBy
+17530060-49cf-485d-aaa9-83dae58ad7b8,0060,0060,227.94,861.41,343.52,2010-08-26T00:00:00.000Z,createdBy.afqa4@example.org,2023-05-23T00:00:00.000Z,modifiedBy.afqa4@example.com
+54318783-5caa-484a-8c35-6c817e5b799c,1878,1878,841.09,301.33,765.86,2011-12-01T00:00:00.000Z,createdBy.38f9i@example.com,2014-07-04T00:00:00.000Z,modifiedBy.38f9i@example.org
+54318796-6467-4231-a515-eebfdd4a0910,1879,1879,728.14,337.11,152.31,2011-10-28T00:00:00.000Z,createdBy.38f9j@example.org,2018-03-18T00:00:00.000Z,modifiedBy.38f9j@example.org
+54318808-d7ae-4504-b5b3-ca48a720538b,1880,1880,782.64,70.32,339.43,2008-08-26T00:00:00.000Z,createdBy.38f9k@example.net,2012-03-23T00:00:00.000Z,modifiedBy.38f9k@example.net
+5431881e-e072-4210-afba-a5d4e1720ba0,1881,1881,410.71,211.51,875.11,2002-06-18T00:00:00.000Z,createdBy.38f9l@example.net,2023-06-07T00:00:00.000Z,modifiedBy.38f9l@example.com
