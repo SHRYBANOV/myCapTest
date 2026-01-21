@@ -24,7 +24,7 @@ type  ze_reason: String(255);
 
 entity Employee : cuid, managed {
   key employeeid : UUID not null;
-  manager_id     : Association to EmplManager;
+  emplmanager    : Association to EmplManager;
   vacbalances    : Association to Vacbalances;
   vacrequest     : Association to VacRequest;
   firstname      : ze_firstname;
@@ -37,7 +37,7 @@ entity Employee : cuid, managed {
   isactive       : abap_boolean;
 }
 entity EmplManager: cuid, managed {
-  managerid     : Association to many Employee on managerid.manager_id = $self;
+  managerid     : Association to many Employee on managerid.emplmanager = $self;
   validfrom     : ze_validfrom;
   validto       : ze_validto;
   isprimary     : ze_isprimary;

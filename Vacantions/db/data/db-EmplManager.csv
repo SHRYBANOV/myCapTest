@@ -1,0 +1,6 @@
+ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
+19884051-ed38-4465-b1f8-cc9a32c0d8f9,2010-06-01,2023-04-07,false,2015-07-13T00:00:00.000Z,createdBy.bu6mr@example.net,2009-06-02T00:00:00.000Z,modifiedBy.bu6mr@example.net
+48588350-1899-4651-ab8d-cc0619f51668,2001-08-13,2013-09-24,false,2001-09-04T00:00:00.000Z,createdBy.2w53n@example.org,2010-03-18T00:00:00.000Z,modifiedBy.2w53n@example.org
+48588363-e5a8-4169-9f53-830f2e902156,2008-03-25,2021-11-23,true,2014-10-22T00:00:00.000Z,createdBy.2w53o@example.com,2015-01-10T00:00:00.000Z,modifiedBy.2w53o@example.net
+4858837c-3697-487f-8a3a-773bc028773f,2010-07-29,2013-12-08,false,2010-03-26T00:00:00.000Z,createdBy.2w53p@example.com,2015-01-24T00:00:00.000Z,modifiedBy.2w53p@example.org
+4858838d-1282-4905-a415-6006af0b5d40,2022-12-03,2011-12-10,true,2010-07-16T00:00:00.000Z,createdBy.2w53q@example.org,2023-11-05T00:00:00.000Z,modifiedBy.2w53q@example.org
