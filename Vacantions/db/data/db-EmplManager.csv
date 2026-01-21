@@ -1,6 +1,0 @@
-ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
-3794641e-760c-4a66-aebd-a4a27416d7a9,2008-12-03,2007-12-27,false,2020-02-25T00:00:00.000Z,createdBy.29byp@example.org,2011-02-05T00:00:00.000Z,modifiedBy.29byp@example.com
-31668709-80b3-4441-93ca-e47d4453671d,2002-10-02,2011-12-17,false,2021-04-19T00:00:00.000Z,createdBy.iurqd@example.com,2011-06-21T00:00:00.000Z,modifiedBy.iurqd@example.org
-31668710-592e-49ba-976d-8c391c501c0f,2021-09-29,2002-03-10,true,2010-08-21T00:00:00.000Z,createdBy.iurqe@example.net,2014-10-04T00:00:00.000Z,modifiedBy.iurqe@example.com
-31668711-45cd-44ae-b444-39b998b8db3c,2010-08-24,2008-04-21,false,2020-01-14T00:00:00.000Z,createdBy.iurqf@example.org,2019-07-05T00:00:00.000Z,modifiedBy.iurqf@example.org
-31668712-11f8-4ba9-9a4f-3d8ba2df22de,2000-10-20,2020-01-25,true,2007-07-02T00:00:00.000Z,createdBy.iurqg@example.net,2004-02-23T00:00:00.000Z,modifiedBy.iurqg@example.org
