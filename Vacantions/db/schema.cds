@@ -23,7 +23,7 @@ type  ze_reason: String(255);
 
 
 entity Employee : cuid, managed {
-  employeeid : UUID not null;
+  employeeid     : UUID not null;
   emplmanager    : Association to many EmplManager on emplmanager.managerid = $self.ID;
   vacbalances    : Association to many Vacbalances on vacbalances.vbal = $self.ID;
   vacrequest     : Association to many VacRequest on vacrequest.req = $self.ID;
@@ -50,7 +50,7 @@ entity Vacbalances : cuid, managed {
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
   useddays      : ze_useddays;
-  remainingdays : ze_remainingdays;
+  remainingdays : ze_remainingdays = entitleddays - useddays
 }
 entity VacRequest : cuid, managed {
   req          : UUID not null;

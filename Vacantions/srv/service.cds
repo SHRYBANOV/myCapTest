@@ -6,3 +6,6 @@ service MyService {
     entity VacRequest as projection on db.VacRequest;
 
 }
+
+
+
