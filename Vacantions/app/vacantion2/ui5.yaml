@@ -2,7 +2,7 @@
 
 specVersion: "4.0"
 metadata:
-  name: vacantion1
+  name: vacantion2
 type: application
 server:
   customMiddleware:
@@ -21,8 +21,3 @@ server:
         port: 35729
         path: webapp
         delay: 300
-    - name: fiori-tools-preview
-      afterMiddleware: fiori-tools-appreload
-      configuration:
-        flp:
-          theme: sap_horizon

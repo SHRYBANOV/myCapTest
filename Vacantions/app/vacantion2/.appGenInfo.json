@@ -1,11 +1,11 @@
 {
   "generationParameters": {
-    "generationDate": "Wed Jan 21 2026 14:53:17 GMT+0000 (Coordinated Universal Time)",
+    "generationDate": "Thu Jan 22 2026 14:07:28 GMT+0000 (Coordinated Universal Time)",
     "generatorPlatform": "SAP Business Application Studio",
     "serviceType": "Local CAP",
     "metadataFilename": "",
     "serviceUrl": "http://localhost:4004/odata/v4/my/",
-    "appName": "vacantion1",
+    "appName": "vacantion2",
     "appTitle": "App Title",
     "appDescription": "An SAP Fiori application.",
     "appNamespace": "",
@@ -21,12 +21,8 @@
       {
         "type": "Main Entity",
         "value": "Employee"
-      },
-      {
-        "type": "Navigation Entity",
-        "value": "None"
       }
     ],
-    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/vacantion1/webapp/index.html"
+    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/vacantion2/index.html"
   }
 }
