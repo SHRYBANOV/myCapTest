@@ -1,4 +1,4 @@
-using MyService as service from '../../srv/service';
+using MyService as service from '../srv/service';
 annotate service.Employee with {
     emplmanager @Common.ValueList : {
         $Type : 'Common.ValueListType',
