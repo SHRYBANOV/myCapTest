@@ -1,4 +1,4 @@
-using { cuid, managed } from '@sap/cds/common';
+using { cuid, managed, sap.common.CodeList } from '@sap/cds/common';
 namespace db;
 
 type  ze_firstname : String(100);
@@ -17,11 +17,26 @@ type  ze_useddays: Decimal(5, 2);
 type  ze_remainingdays: Decimal(5, 2);
 type  ze_startdate: Date;
 type  ze_enddate: Date;
-type  ze_status: String(4);
 type  ze_reason: String(255);
 
-
-
+entity Status : CodeList {
+key code: String enum {
+    new = 'N';
+    assigned = 'A'; 
+    in_process = 'I'; 
+    on_hold = 'H'; 
+    resolved = 'R'; 
+    closed = 'C'; 
+}};
+entity VacType : CodeList {
+key code: String enum {
+    new = 'N';
+    assigned = 'A'; 
+    in_process = 'I'; 
+    on_hold = 'H'; 
+    resolved = 'R'; 
+    closed = 'C'; 
+}};
 entity Employee : cuid, managed {
   key employeeid     : UUID not null;
   emplmanager    : Association to EmplManager;
@@ -44,20 +59,20 @@ entity EmplManager: cuid, managed {
   isprimary     : ze_isprimary;
 }
 entity Vacbalances : cuid, managed {
-  key vbal          : Association to Employee;
+  key vbal          : UUID not null;
   employee       :Association to many Employee on employee.vacbalances = $self;
-  vacationtype  : ze_vacationtype;
+  vacationtype  : Association to VacType default 'N';
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
   useddays      : ze_useddays;
-  remainingdays : ze_remainingdays = entitleddays - useddays
+  remainingdays : ze_remainingdays = entitleddays - useddays;
 }
 entity VacRequest : cuid, managed {
-  key req          : Association to Employee;
+  key req          : UUID not null;
   employee       :Association to many Employee on employee.vacrequest = $self;
   vacationtype : ze_vacationtype;
   startdate    : ze_startdate;
   enddate      : ze_enddate;
-  status       : ze_status;
+  status       : Association to Status default 'N';
   reason       : ze_reason;
 }
