@@ -1,6 +1,6 @@
-managerid_ID,managerid_employeeid,ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
-72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319310-e8d8-47dc-a600-5199e48e73fa,2021-06-08,2019-06-08,true,2020-03-14T00:00:00.000Z,createdBy.i1uj2@example.com,2011-08-10T00:00:00.000Z,modifiedBy.i1uj2@example.com
-72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319311-a4f5-4929-b43d-6659c1cd9b87,2010-05-03,2002-10-21,false,2005-06-15T00:00:00.000Z,createdBy.i1uj3@example.com,2009-03-10T00:00:00.000Z,modifiedBy.i1uj3@example.org
-72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319312-3481-4330-b832-50c513def96b,2017-07-18,2004-10-27,true,2015-11-23T00:00:00.000Z,createdBy.i1uj4@example.com,2009-01-12T00:00:00.000Z,modifiedBy.i1uj4@example.org
-72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319313-22ba-4916-a4e3-66f3b5d15de8,2019-09-26,2018-05-16,false,2006-09-30T00:00:00.000Z,createdBy.i1uj5@example.com,2014-04-05T00:00:00.000Z,modifiedBy.i1uj5@example.com
-72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319314-5c37-40f0-88ef-c9c9bb77d985,2015-05-15,2011-08-14,true,2007-08-06T00:00:00.000Z,createdBy.i1uj6@example.com,2009-02-25T00:00:00.000Z,modifiedBy.i1uj6@example.net
+managerid,ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
+13142633-7e5b-41d3-8bb0-1fe832acfead,13142633-9d3f-4c20-a3db-704c685ab1be,2020-06-09,2015-07-31,false,2016-09-26T00:00:00.000Z,createdBy.7tox5@example.net,2006-02-04T00:00:00.000Z,modifiedBy.7tox5@example.org
+21426495-15cf-412e-993f-dcf3c7c45d7b,21426495-6bb4-423a-a443-07b6ca047d1c,2009-06-17,2010-07-09,false,2001-02-27T00:00:00.000Z,createdBy.cr8sf@example.net,2011-01-09T00:00:00.000Z,modifiedBy.cr8sf@example.org
+21426496-9f24-4a73-b8f9-c76ad812426c,21426496-2066-4403-abff-02c2b0f0d53b,2018-05-31,2020-06-09,true,2021-02-27T00:00:00.000Z,createdBy.cr8sg@example.org,2005-07-20T00:00:00.000Z,modifiedBy.cr8sg@example.org
+21426497-989f-482b-a977-6457e91179a5,21426497-4de3-4319-a82c-e75147eb26a4,2004-09-21,2021-11-18,false,2010-11-19T00:00:00.000Z,createdBy.cr8sh@example.com,2013-03-08T00:00:00.000Z,modifiedBy.cr8sh@example.com
+21426498-8dcd-4910-91b4-da1232bf83ae,21426498-8899-4afb-a5be-006237422ec8,2000-03-05,2013-05-19,true,2003-05-08T00:00:00.000Z,createdBy.cr8si@example.com,2003-10-13T00:00:00.000Z,modifiedBy.cr8si@example.net

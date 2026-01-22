@@ -24,9 +24,9 @@ type  ze_reason: String(255);
 
 entity Employee : cuid, managed {
   key employeeid     : UUID not null;
-  emplmanager    : Association to many EmplManager;
-  vacbalances    : Association to many Vacbalances;
-  vacrequest     : Association to many VacRequest;
+  emplmanager    : Association to EmplManager;
+  vacbalances    : Association to Vacbalances;
+  vacrequest     : Association to VacRequest;
   firstname      : ze_firstname;
   lastname       : ze_lastname;
   email          : ze_email;
