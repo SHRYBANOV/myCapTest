@@ -54,7 +54,10 @@ annotate MyService.Employee with @(
         //facets
         Facets  : [
            { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', Label : 'Employee', ID : 'idBasicData'},
-           { $Type : 'UI.ReferenceFacet', Target : 'EmplManager/@UI.ListItem', Label : 'EmplManager', ID : 'idEmplManager'}
+           { $Type : 'UI.ReferenceFacet', Target : 'EmplManager/@UI.ListItem', Label : 'EmplManager', ID : 'idEmplManager'},
+           { $Type : 'UI.ReferenceFacet', Target : 'Vacbalances/@UI.ListItem', Label : 'Vacbalances', ID : 'idVacbalances'},
+           { $Type : 'UI.ReferenceFacet', Target : 'VacRequest/@UI.ListItem', Label : 'Vacrequest', ID : 'idVacrequest'}
+
         ],
     }
 );

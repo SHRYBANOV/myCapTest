@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Thu Jan 22 2026 14:35:20 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Thu Jan 22 2026 17:36:05 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
 |**App Generator Version**<br>1.20.1|
 |**Generation Platform**<br>SAP Business Application Studio|
@@ -15,7 +15,8 @@
 |**UI5 Version**<br>1.143.2|
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
-|**Main Entity**<br>Employee|
+|**Main Entity**<br>EmplManager|
+|**Navigation Entity**<br>None|
 
 ## vacantion1
 

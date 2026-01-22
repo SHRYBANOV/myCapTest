@@ -1,6 +1,6 @@
 {
   "generationParameters": {
-    "generationDate": "Thu Jan 22 2026 14:35:20 GMT+0000 (Coordinated Universal Time)",
+    "generationDate": "Thu Jan 22 2026 17:36:05 GMT+0000 (Coordinated Universal Time)",
     "generatorPlatform": "SAP Business Application Studio",
     "serviceType": "Local CAP",
     "metadataFilename": "",
@@ -20,7 +20,11 @@
     "entityRelatedConfig": [
       {
         "type": "Main Entity",
-        "value": "Employee"
+        "value": "EmplManager"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "None"
       }
     ],
     "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/vacantion1/index.html"

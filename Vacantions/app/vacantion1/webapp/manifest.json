@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.20.1",
-      "toolsId": "4050a367-e9b1-43ef-8ca6-3a615f64e531"
+      "toolsId": "112578f2-0bc8-452e-9466-72d523b529d1"
     },
     "dataSources": {
       "mainService": {
@@ -85,28 +85,28 @@
       "routes": [
         {
           "pattern": ":?query:",
-          "name": "EmployeeList",
-          "target": "EmployeeList"
+          "name": "EmplManagerList",
+          "target": "EmplManagerList"
         },
         {
-          "pattern": "Employee({key}):?query:",
-          "name": "EmployeeObjectPage",
-          "target": "EmployeeObjectPage"
+          "pattern": "EmplManager({key}):?query:",
+          "name": "EmplManagerObjectPage",
+          "target": "EmplManagerObjectPage"
         }
       ],
       "targets": {
-        "EmployeeList": {
+        "EmplManagerList": {
           "type": "Component",
-          "id": "EmployeeList",
+          "id": "EmplManagerList",
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "contextPath": "/Employee",
+              "contextPath": "/EmplManager",
               "variantManagement": "Page",
               "navigation": {
-                "Employee": {
+                "EmplManager": {
                   "detail": {
-                    "route": "EmployeeObjectPage"
+                    "route": "EmplManagerObjectPage"
                   }
                 }
               },
@@ -120,14 +120,14 @@
             }
           }
         },
-        "EmployeeObjectPage": {
+        "EmplManagerObjectPage": {
           "type": "Component",
-          "id": "EmployeeObjectPage",
+          "id": "EmplManagerObjectPage",
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Employee"
+              "contextPath": "/EmplManager"
             }
           }
         }

@@ -11,7 +11,6 @@ type  abap_boolean: Boolean;
 type  ze_validfrom: Date;
 type  ze_validto: Date;
 type  ze_isprimary: abap_boolean;
-type  ze_vacationtype: String(4);
 type  ze_entitleddays: Decimal(5, 2);
 type  ze_useddays: Decimal(5, 2);
 type  ze_remainingdays: Decimal(5, 2);
@@ -70,7 +69,7 @@ entity Vacbalances : cuid, managed {
 entity VacRequest : cuid, managed {
   key req          : UUID not null;
   employee       :Association to many Employee on employee.vacrequest = $self;
-  vacationtype : ze_vacationtype;
+  vacationtype : Association to VacType default 'N';
   startdate    : ze_startdate;
   enddate      : ze_enddate;
   status       : Association to Status default 'N';
