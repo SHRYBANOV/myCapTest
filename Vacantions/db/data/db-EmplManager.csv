@@ -1,6 +1,6 @@
-managerid_ID,managerid_employeeid,ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
-24384467-368d-4708-8cd3-fbb6f7e2960f,24384467-c0cb-4e27-9613-3e3156d80cdc,28458888-9fc8-47a9-ad82-69a957b7c0a6,2002-08-27,2020-06-07,true,2023-11-27T00:00:00.000Z,createdBy.gxz0o@example.org,2015-09-24T00:00:00.000Z,modifiedBy.gxz0o@example.net
-24384467-368d-4708-8cd3-fbb6f7e2960f,24384467-c0cb-4e27-9613-3e3156d80cdc,28458889-c43c-4b55-a2ce-b5f98bb5cd23,2006-01-26,2014-03-23,false,2021-06-17T00:00:00.000Z,createdBy.gxz0p@example.net,2002-09-03T00:00:00.000Z,modifiedBy.gxz0p@example.org
-24384467-368d-4708-8cd3-fbb6f7e2960f,24384467-c0cb-4e27-9613-3e3156d80cdc,28458890-3842-43a8-87a5-f657cca96fa9,2014-09-29,2007-09-22,true,2016-09-16T00:00:00.000Z,createdBy.gxz0q@example.com,2004-09-30T00:00:00.000Z,modifiedBy.gxz0q@example.com
-24384467-368d-4708-8cd3-fbb6f7e2960f,24384467-c0cb-4e27-9613-3e3156d80cdc,28458891-bd39-4875-9f1e-47187117cce0,2007-03-02,2002-02-14,false,2014-06-14T00:00:00.000Z,createdBy.gxz0r@example.net,2009-11-30T00:00:00.000Z,modifiedBy.gxz0r@example.net
-24384467-368d-4708-8cd3-fbb6f7e2960f,24384467-c0cb-4e27-9613-3e3156d80cdc,28458892-5bd9-43c0-b7ac-748572da3964,2002-01-08,2002-03-28,true,2004-06-26T00:00:00.000Z,createdBy.gxz0s@example.net,2023-11-14T00:00:00.000Z,modifiedBy.gxz0s@example.com
+ID,managerid,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
+60370977-72bd-42c8-844e-2ce45af489b0,6037097b-59c2-4ba2-9178-e8c9e943b0cd,2012-06-23,2023-04-06,false,2017-01-11T00:00:00.000Z,createdBy.3le95@example.com,2008-05-03T00:00:00.000Z,modifiedBy.3le95@example.org
+60370989-b4fe-48bf-9954-46d8267fe15d,60370987-b12c-422b-8378-82a39837ed47,2021-02-02,2004-07-10,true,2020-08-04T00:00:00.000Z,createdBy.3le96@example.org,2022-06-24T00:00:00.000Z,modifiedBy.3le96@example.com
+60370991-56bb-42cb-88b9-b0b6ce155b71,60370997-3dae-4ce0-8d58-fba9ca59d8e4,2001-06-12,2013-09-10,false,2017-11-23T00:00:00.000Z,createdBy.3le97@example.net,2008-08-22T00:00:00.000Z,modifiedBy.3le97@example.net
+60371000-83af-4f18-b174-8e54053ecc07,60371004-c6b6-4e3d-be09-7bdb09815f1c,2008-10-30,2011-12-30,true,2013-11-21T00:00:00.000Z,createdBy.3le98@example.net,2008-11-30T00:00:00.000Z,modifiedBy.3le98@example.net
+60371019-24ad-4e7b-b181-c10019d5c3a3,60371013-bf52-44fb-a8d3-59910b946a9c,2023-02-22,2006-11-28,false,2007-06-29T00:00:00.000Z,createdBy.3le99@example.net,2015-05-31T00:00:00.000Z,modifiedBy.3le99@example.org

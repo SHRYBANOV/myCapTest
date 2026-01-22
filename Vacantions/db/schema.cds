@@ -23,10 +23,10 @@ type  ze_reason: String(255);
 
 
 entity Employee : cuid, managed {
-  key employeeid : UUID not null;
-  emplmanager    : Association to EmplManager on emplmanager.managerid = $self;
-  vacbalances    : Association to Vacbalances on vacbalances.vbal = $self;
-  vacrequest     : Association to VacRequest on vacrequest.req = $self;
+  employeeid : UUID not null;
+  emplmanager    : Association to many EmplManager on emplmanager.managerid = $self.ID;
+  vacbalances    : Association to many Vacbalances on vacbalances.vbal = $self.ID;
+  vacrequest     : Association to many VacRequest on vacrequest.req = $self.ID;
   firstname      : ze_firstname;
   lastname       : ze_lastname;
   email          : ze_email;
@@ -37,15 +37,15 @@ entity Employee : cuid, managed {
   isactive       : abap_boolean;
 }
 entity EmplManager: cuid, managed {
-  key managerid     : UUID not null;
-  employee    : Association to many Employee on employee.employeeid = $self;
+  managerid     : UUID not null;
+  employee      : Association to Employee on employee.ID = $self.ID;
   validfrom     : ze_validfrom;
   validto       : ze_validto;
   isprimary     : ze_isprimary;
 }
 entity Vacbalances : cuid, managed {
-  key vbal          : UUID not null; 
-  employee    : Association to many Employee on employee.employeeid = $self;
+  vbal          : UUID not null; 
+  employee    : Association to Employee on employee.ID = $self.ID;
   vacationtype  : ze_vacationtype;
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
@@ -53,8 +53,8 @@ entity Vacbalances : cuid, managed {
   remainingdays : ze_remainingdays;
 }
 entity VacRequest : cuid, managed {
-  key req          : UUID not null;
-  employee    : Association to many Employee on employee.employeeid = $self;
+  req          : UUID not null;
+  employee    : Association to Employee on employee.ID = $self.ID;
   vacationtype : ze_vacationtype;
   startdate    : ze_startdate;
   enddate      : ze_enddate;
