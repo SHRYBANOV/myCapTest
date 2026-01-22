@@ -1,3 +1,6 @@
-managerid_ID,ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
-29439407-62ac-4f4a-9aea-27dd1b66d717,21455694-7f1a-4547-a921-dc6520e29fda,2020-05-20,2000-04-17,true,2015-04-11T00:00:00.000Z,createdBy.crvbi@example.net,2011-11-30T00:00:00.000Z,modifiedBy.crvbi@example.org
-29439407-62ac-4f4a-9aea-27dd1b66d717,21455695-b72b-4f91-bcfe-5bca1234288e,2019-02-14,2007-07-15,false,2017-06-03T00:00:00.000Z,createdBy.crvbj@example.net,2016-02-04T00:00:00.000Z,modifiedBy.crvbj@example.net
+managerid_ID,managerid_employeeid,ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
+72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319310-e8d8-47dc-a600-5199e48e73fa,2021-06-08,2019-06-08,true,2020-03-14T00:00:00.000Z,createdBy.i1uj2@example.com,2011-08-10T00:00:00.000Z,modifiedBy.i1uj2@example.com
+72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319311-a4f5-4929-b43d-6659c1cd9b87,2010-05-03,2002-10-21,false,2005-06-15T00:00:00.000Z,createdBy.i1uj3@example.com,2009-03-10T00:00:00.000Z,modifiedBy.i1uj3@example.org
+72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319312-3481-4330-b832-50c513def96b,2017-07-18,2004-10-27,true,2015-11-23T00:00:00.000Z,createdBy.i1uj4@example.com,2009-01-12T00:00:00.000Z,modifiedBy.i1uj4@example.org
+72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319313-22ba-4916-a4e3-66f3b5d15de8,2019-09-26,2018-05-16,false,2006-09-30T00:00:00.000Z,createdBy.i1uj5@example.com,2014-04-05T00:00:00.000Z,modifiedBy.i1uj5@example.com
+72414858-8a49-45e0-9bf7-bd0fe58e82aa,7241485c-e838-467e-a9f2-507797367b2f,30319314-5c37-40f0-88ef-c9c9bb77d985,2015-05-15,2011-08-14,true,2007-08-06T00:00:00.000Z,createdBy.i1uj6@example.com,2009-02-25T00:00:00.000Z,modifiedBy.i1uj6@example.net

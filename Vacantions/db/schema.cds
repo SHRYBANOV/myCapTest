@@ -24,9 +24,9 @@ type  ze_reason: String(255);
 
 entity Employee : cuid, managed {
   key employeeid     : UUID not null;
-  emplmanager    : Composition of many EmplManager on emplmanager.managerid = $self;
-  vacbalances    : Composition of many Vacbalances on vacbalances.vbal = $self;
-  vacrequest     : Composition of many VacRequest on vacrequest.req = $self;
+  emplmanager    : Association to many EmplManager;
+  vacbalances    : Association to many Vacbalances;
+  vacrequest     : Association to many VacRequest;
   firstname      : ze_firstname;
   lastname       : ze_lastname;
   email          : ze_email;
@@ -37,13 +37,15 @@ entity Employee : cuid, managed {
   isactive       : abap_boolean;
 }
 entity EmplManager: cuid, managed {
-  key managerid     : Association to Employee;
+  key managerid     : UUID not null;
+  employee       :Association to many Employee on employee.emplmanager = $self;
   validfrom     : ze_validfrom;
   validto       : ze_validto;
   isprimary     : ze_isprimary;
 }
 entity Vacbalances : cuid, managed {
-  key vbal          : Association to Employee; 
+  key vbal          : Association to Employee;
+  employee       :Association to many Employee on employee.vacbalances = $self;
   vacationtype  : ze_vacationtype;
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
@@ -52,6 +54,7 @@ entity Vacbalances : cuid, managed {
 }
 entity VacRequest : cuid, managed {
   key req          : Association to Employee;
+  employee       :Association to many Employee on employee.vacrequest = $self;
   vacationtype : ze_vacationtype;
   startdate    : ze_startdate;
   enddate      : ze_enddate;
