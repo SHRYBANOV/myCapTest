@@ -46,7 +46,7 @@ annotate MyService.Employee with @(
     }
 );
 annotate MyService.EmplManager with @(
-    UI: { LineItem: [
+    UI: { LineItem : [
         { $Type: 'UI.DataField', Value: 'employee' },
         { $Type: 'UI.DataField', Value: 'validfrom' },
         { $Type: 'UI.DataField', Value: 'validto' }, 

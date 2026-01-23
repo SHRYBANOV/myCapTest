@@ -38,9 +38,9 @@ key code: String enum {
 }};
 entity Employee : cuid, managed {
   key employeeid     : UUID not null;
-  emplmanager    : Association to EmplManager;
-  vacbalances    : Association to Vacbalances;
-  vacrequest     : Association to VacRequest;
+  emplmanager    : Composition of many EmplManager on emplmanager.managerid = $self;
+  vacbalances    : Composition of many Vacbalances on vacbalances.vbal = $self;
+  vacrequest     : Composition of many VacRequest on vacrequest.req = $self;
   firstname      : ze_firstname;
   lastname       : ze_lastname;
   email          : ze_email;
@@ -51,15 +51,13 @@ entity Employee : cuid, managed {
   isactive       : abap_boolean;
 }
 entity EmplManager: cuid, managed {
-  key managerid     : UUID not null;
-  employee       :Association to many Employee on employee.emplmanager = $self;
+  managerid     : Association to Employee;
   validfrom     : ze_validfrom;
   validto       : ze_validto;
   isprimary     : ze_isprimary;
 }
 entity Vacbalances : cuid, managed {
-  key vbal          : UUID not null;
-  employee       :Association to many Employee on employee.vacbalances = $self;
+  vbal          : Association to Employee;
   vacationtype  : Association to VacType default 'N';
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
@@ -67,8 +65,7 @@ entity Vacbalances : cuid, managed {
   remainingdays : ze_remainingdays = entitleddays - useddays;
 }
 entity VacRequest : cuid, managed {
-  key req          : UUID not null;
-  employee       :Association to many Employee on employee.vacrequest = $self;
+  req          : Association to many Employee;
   vacationtype : Association to VacType default 'N';
   startdate    : ze_startdate;
   enddate      : ze_enddate;
