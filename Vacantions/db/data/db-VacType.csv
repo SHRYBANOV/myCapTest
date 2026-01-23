@@ -1,4 +1,4 @@
 code,name,descr
-N,new,new
 H,on_hold,on_hold
-C,closed,closed
+N,new,new
+I,in_process,in_process
