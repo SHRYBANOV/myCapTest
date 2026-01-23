@@ -1,6 +1,4 @@
 code,name,descr
-C,closed,closed
-N,new,new
+R,resolved,resolved
 I,in_process,in_process
 H,on_hold,on_hold
-R,resolved,resolved

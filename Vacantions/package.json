@@ -1,5 +1,5 @@
 {
-  "name": "Vacantions",
+  "name": "vacantions",
   "version": "1.0.0",
   "description": "A simple CAP project.",
   "dependencies": {
@@ -24,5 +24,8 @@
     "app/vacantion2",
     "app/vacantion1",
     "app/vacantion1"
-  ]
+  ],
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

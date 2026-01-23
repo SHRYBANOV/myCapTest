@@ -1,12 +1,12 @@
 using { db } from '../db/schema';
 service MyService {
-    @odata.draft.enabled
+    //@odata.draft.enabled
     entity Employee as projection on db.Employee;
-    @odata.draft.enabled
+    //@odata.draft.enabled
     entity EmplManager as projection on db.EmplManager;
-    @odata.draft.enabled
+    //@odata.draft.enabled
     entity Vacbalances as projection on db.Vacbalances;
-    @odata.draft.enabled
+    //@odata.draft.enabled
     entity VacRequest as projection on db.VacRequest;
 
 }
@@ -38,13 +38,16 @@ annotate MyService.Employee with @(
         //facets
         Facets  : [
            { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', Label : 'Employee', ID : 'idBasicData'},
-           { $Type : 'UI.ReferenceFacet', Target : 'EmplManager/@UI.ListItem', Label : 'EmplManager', ID : 'idEmplManager'},
-           { $Type : 'UI.ReferenceFacet', Target : 'Vacbalances/@UI.ListItem', Label : 'Vacbalances', ID : 'idVacbalances'},
-           { $Type : 'UI.ReferenceFacet', Target : 'VacRequest/@UI.ListItem', Label : 'VacRequest', ID : 'idVacrequest'}
+           { $Type : 'UI.ReferenceFacet', Target : 'MyService.EmplManager/@UI.ListItem', Label : 'EmplManager', ID : 'idEmplManager'},
+           { $Type : 'UI.ReferenceFacet', Target : 'MyService.Vacbalances/@UI.ListItem', Label : 'Vacbalances', ID : 'idVacbalances'},
+           { $Type : 'UI.ReferenceFacet', Target : 'MyService.VacRequest/@UI.ListItem', Label : 'VacRequest', ID : 'idVacrequest'}
 
         ],
     }
 );
+annotate db.Employee {
+    firstname @change.log;
+}
 annotate MyService.EmplManager with @(
     UI: { LineItem : [
         { $Type: 'UI.DataField', Value: 'employee' },
