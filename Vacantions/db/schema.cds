@@ -38,9 +38,9 @@ key code: String enum {
 }};
 entity Employee : cuid, managed {
   key employeeid     : UUID not null;
-  emplmanager    : Association to EmplManager;
-  vacbalances    : Association to Vacbalances;
-  vacrequest     : Association to VacRequest;
+  emplmanager    : Association to many EmplManager on emplmanager.employee = $self;
+  vacbalances    : Association to many Vacbalances on vacbalances.employee = $self;
+  vacrequest     : Association to many VacRequest on vacrequest.employee = $self;
   firstname      : ze_firstname;
   lastname       : ze_lastname;
   email          : ze_email;
@@ -52,14 +52,14 @@ entity Employee : cuid, managed {
 }
 entity EmplManager: cuid, managed {
   managerid     : UUID not null;
-  employee      : Association to many Employee on employee.emplmanager = $self;
+  employee      : Association to Employee;
   validfrom     : ze_validfrom;
   validto       : ze_validto;
   isprimary     : ze_isprimary;
 }
 entity Vacbalances : cuid, managed {
   vbal          : UUID not null;
-  employee      : Association to many Employee on employee.vacbalances = $self;
+  employee      : Association to Employee;
   vacationtype  : Association to VacType;
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
@@ -68,7 +68,7 @@ entity Vacbalances : cuid, managed {
 }
 entity VacRequest : cuid, managed {
   req          : UUID not null;
-  employee     : Association to many Employee on employee.vacrequest = $self;
+  employee     : Association to Employee;
   vacationtype : Association to VacType;
   startdate    : ze_startdate;
   enddate      : ze_enddate;

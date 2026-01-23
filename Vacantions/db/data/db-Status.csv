@@ -1,5 +1,4 @@
 code,name,descr
-A,assigned,assigned
-I,in_process,in_process
-R,resolved,resolved
+C,closed,closed
 N,new,new
+I,in_process,in_process

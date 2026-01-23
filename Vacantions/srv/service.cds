@@ -10,59 +10,85 @@ service MyService {
     entity VacRequest as projection on db.VacRequest;
 
 }
- 
+//annotate MyService.Employee with @UI.HeaderInfo { TypeName: 'Employee', TypeNamePlural: 'Employees' };
 
-annotate MyService.Employee with @(
-    UI : {
-        LineItem : [
-            { $Type : 'UI.DataField', Value : firstname, }, 
-            { $Type : 'UI.DataField', Value : lastname, }, 
-            { $Type : 'UI.DataField', Value : email, },  
-            { $Type : 'UI.DataField', Value : phone, }, 
-            { $Type : 'UI.DataField', Value : hiredate, }, 
-            { $Type : 'UI.DataField', Value : zposition,  }, 
-            { $Type : 'UI.DataField', Value : department, }, 
-            { $Type : 'UI.DataField', Value : isactive, }
+annotate MyService.Employee with { ID @UI.Hidden @Common.Text : { $value : employeeid, ![@UI.TextArrangement]: #TextOnly }};
+annotate MyService.Employee with @UI.Identification: [ { $Type : 'UI.DataField', Value : employeeid } ];
+annotate MyService.Employee with {
+    firstname @title : 'First Name';
+    lastname @title : 'Last Name';
+    email @title : 'Email';
+    phone @title : 'Phone';
+    hiredate @title : 'Hire Date';
+    zposition @title : 'Position';
+    department @title : 'Department';
+    isactive @title : 'Active Status';
+}
 
-        ],
-        
-        FieldGroup #BasicData : {
-            $Type : 'UI.FieldGroupType',
-            Data : [
-            { $Type : 'UI.DataField', Value : createdAt, },
-            { $Type : 'UI.DataField', Value : createdBy, },
-            { $Type : 'UI.DataField', Value : modifiedAt, },
-            { $Type : 'UI.DataField', Value : modifiedBy, }
-        ],
-        },
-        //facets
-        Facets  : [
-           { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', Label : 'Employee', ID : 'idBasicData'},
-           { $Type : 'UI.ReferenceFacet', Target : 'emplmanager/@UI.LineItem', Label : 'EmplManager', ID : 'idEmplManager'},
-           { $Type : 'UI.ReferenceFacet', Target : 'vacbalances/@UI.LineItem', Label : 'VacBalances', ID : 'idVacBalances'},
+annotate MyService.Employee with @UI.LineItem:[
+    { $Type : 'UI.DataField', Value : firstname, }, 
+    { $Type : 'UI.DataField', Value : lastname, }, 
+    { $Type : 'UI.DataField', Value : email, },  
+    { $Type : 'UI.DataField', Value : phone, }, 
+    { $Type : 'UI.DataField', Value : hiredate, }, 
+    { $Type : 'UI.DataField', Value : zposition,  }, 
+    { $Type : 'UI.DataField', Value : department, }, 
+    { $Type : 'UI.DataField', Value : isactive, }
+    ];
+annotate MyService.Employee with @UI.FieldGroup #Main : {
+    $Type : 'UI.FieldGroupType', Data : [
+    { $Type : 'UI.DataField', Value : firstname, }, 
+    { $Type : 'UI.DataField', Value : lastname, }, 
+    { $Type : 'UI.DataField', Value : email, },  
+    { $Type : 'UI.DataField', Value : phone, }, 
+    { $Type : 'UI.DataField', Value : hiredate, }, 
+    { $Type : 'UI.DataField', Value : zposition,  }, 
+    { $Type : 'UI.DataField', Value : department, }, 
+    { $Type : 'UI.DataField', Value : isactive, }
+    ]
+}; 
+//facets -----
+annotate MyService.Employee with @UI.Facets  : [
+    { $Type : 'UI.ReferenceFacet', ID : 'Main', Label : 'Основные данные', Target : '@UI.FieldGroup#Main'},
+    { $Type : 'UI.ReferenceFacet', Target : 'emplmanager/@UI.LineItem', Label : 'EmplManager', ID : 'idEmplManager'},
+    { $Type : 'UI.ReferenceFacet', Target : 'vacbalances/@UI.LineItem', Label : 'VacBalances', ID : 'idVacBalances'},
  //          { $Type : 'UI.ReferenceFacet', Target : 'vacrequest/@UI.LineItem', Label : 'VacRequest', ID : 'idVacRequest' },
+];
 
-        ],
-    });
-
-annotate MyService.EmplManager with @(
-    UI: { LineItem : [
+annotate MyService.EmplManager with @UI.LineItem: [
         { $Type: 'UI.DataField', Value: 'validfrom' },
         { $Type: 'UI.DataField', Value: 'validto' }, 
         { $Type: 'UI.DataField', Value: 'isprimary' }
-    ],
-    }
-    );
-annotate MyService.Vacbalances with @(
-    UI: { LineItem: [
+    ];
+annotate MyService.EmplManager with @UI.FieldGroup #Empl: {
+    $Type : 'UI.FieldGroupType', Data : [
+        { $Type: 'UI.DataField', Value: 'validfrom' },
+        { $Type: 'UI.DataField', Value: 'validto' }, 
+        { $Type: 'UI.DataField', Value: 'isprimary' }
+    ] };
+annotate MyService.EmplManager with @UI.Facets  : [
+    { $Type : 'UI.ReferenceFacet', ID : 'Empl', Label : 'Менеджмент', Target : '@UI.FieldGroup#Empl'}
+];
+
+annotate MyService.Vacbalances with @UI.LineItem: [
         { $Type: 'UI.DataField', Value: 'vacationtype' },
         { $Type: 'UI.DataField', Value: 'zyear' },
         { $Type: 'UI.DataField', Value: 'entitleddays' },
         { $Type: 'UI.DataField', Value: 'useddays' },
         { $Type: 'UI.DataField', Value: 'remainingdays' }
-    ],
-    }
-);
+    ];
+annotate MyService.Vacbalances with @UI.FieldGroup #Vacbal: {
+    $Type : 'UI.FieldGroupType', Data : [
+        { $Type: 'UI.DataField', Value: 'vacationtype' },
+        { $Type: 'UI.DataField', Value: 'zyear' },
+        { $Type: 'UI.DataField', Value: 'entitleddays' },
+        { $Type: 'UI.DataField', Value: 'useddays' },
+        { $Type: 'UI.DataField', Value: 'remainingdays' }
+    ] };
+annotate MyService.Vacbalances with @UI.Facets  : [
+    { $Type : 'UI.ReferenceFacet', ID : 'Vacbal', Label : 'Баланс', Target : '@UI.FieldGroup#Vacbal'}
+];
+
 annotate MyService.VacRequest with @(
     UI: { LineItem: [
         { $Type: 'UI.DataField', Value: 'vacationtype' },
