@@ -15,31 +15,14 @@ service MyService {
 annotate MyService.Employee with @(
     UI : {
         LineItem : [
-            {
-                $Type : 'UI.DataField',
-                Value : firstname,
-            }, {
-                $Type : 'UI.DataField',
-                Value : lastname,
-            }, {
-                $Type : 'UI.DataField',
-                Value : email,
-            }, {
-                $Type : 'UI.DataField',
-                Value : phone,
-            }, {
-                $Type : 'UI.DataField',
-                Value : hiredate,
-            }, {
-                $Type : 'UI.DataField',
-                Value : zposition,
-            }, {
-                $Type : 'UI.DataField',
-                Value : department,
-            }, {
-                $Type : 'UI.DataField',
-                Value : isactive,
-            }
+            { $Type : 'UI.DataField', Value : firstname, }, 
+            { $Type : 'UI.DataField', Value : lastname, }, 
+            { $Type : 'UI.DataField', Value : email, },  
+            { $Type : 'UI.DataField', Value : phone, }, 
+            { $Type : 'UI.DataField', Value : hiredate, }, 
+            { $Type : 'UI.DataField', Value : zposition,  }, 
+            { $Type : 'UI.DataField', Value : department, }, 
+            { $Type : 'UI.DataField', Value : isactive, }
 
         ],
         FieldGroup #BasicData : {
@@ -56,14 +39,11 @@ annotate MyService.Employee with @(
            { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', Label : 'Employee', ID : 'idBasicData'},
            { $Type : 'UI.ReferenceFacet', Target : 'EmplManager/@UI.ListItem', Label : 'EmplManager', ID : 'idEmplManager'},
            { $Type : 'UI.ReferenceFacet', Target : 'Vacbalances/@UI.ListItem', Label : 'Vacbalances', ID : 'idVacbalances'},
-           { $Type : 'UI.ReferenceFacet', Target : 'VacRequest/@UI.ListItem', Label : 'Vacrequest', ID : 'idVacrequest'}
+           { $Type : 'UI.ReferenceFacet', Target : 'VacRequest/@UI.ListItem', Label : 'VacRequest', ID : 'idVacrequest'}
 
         ],
     }
-)
-{
-    ID @UI: { Hidden };
-};
+);
 annotate MyService.EmplManager with @(
     UI: { LineItem: [
         { $Type: 'UI.DataField', Value: 'employee' },
@@ -84,10 +64,7 @@ annotate MyService.EmplManager with @(
         { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', } 
     ],
     }
-    )
-{
-    ID @UI: { Hidden };
-};
+    );
 annotate MyService.Vacbalances with @(
     UI: { LineItem: [
         { $Type: 'UI.DataField', Value: 'employee' },
@@ -110,10 +87,7 @@ annotate MyService.Vacbalances with @(
         { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', } 
     ],
     }
-)
-{
-    ID @UI: { Hidden };
-};
+);
 annotate MyService.VacRequest with @(
     UI: { LineItem: [
         { $Type: 'UI.DataField', Value: 'employee' },
@@ -135,7 +109,4 @@ annotate MyService.VacRequest with @(
     Facets  : [
         { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', } 
     ],
-    })
-    {
-        ID @UI: { Hidden };
-    }
+    });
