@@ -1,6 +1,6 @@
 managerid,ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
-25732471-59a3-4d9d-8ec8-6cae84f12589,25732471-b3fe-4c41-be48-b69acc424720,2000-04-15,2005-03-20,false,2021-03-19T00:00:00.000Z,createdBy.fbjav@example.com,2002-09-07T00:00:00.000Z,modifiedBy.fbjav@example.com
-14550041-dbca-4a24-9b5a-9cf71250b5b6,14550041-cf72-4571-8085-8e0c3d51e13d,2007-04-13,2014-05-21,false,2008-03-15T00:00:00.000Z,createdBy.8nuvt@example.net,2016-01-03T00:00:00.000Z,modifiedBy.8nuvt@example.org
-14550042-dc58-438b-9940-be45392706c3,14550042-3131-4658-90d5-4533df21479a,2002-03-07,2011-06-29,true,2015-06-06T00:00:00.000Z,createdBy.8nuvu@example.org,2011-12-21T00:00:00.000Z,modifiedBy.8nuvu@example.org
-14550043-2ca1-465f-a426-ecafd36ab00f,14550043-bc51-492d-a4c1-e417a96e84cd,2010-05-12,2022-10-25,false,2001-06-04T00:00:00.000Z,createdBy.8nuvv@example.net,2011-10-11T00:00:00.000Z,modifiedBy.8nuvv@example.com
-14550044-c436-4723-9e3e-2e5a085396c1,14550044-cf6a-4b0c-b6a9-1a3cdb911b6f,2020-01-27,2023-03-22,true,2004-10-04T00:00:00.000Z,createdBy.8nuvw@example.org,2010-08-06T00:00:00.000Z,modifiedBy.8nuvw@example.net
+9127662d-61ba-40bd-aa2c-f84cbee019ca,91276622-0201-4698-922d-2924c49e79d1,2012-09-17,2023-10-14,true,2017-12-02T00:00:00.000Z,createdBy.5fmy6@example.com,2015-11-28T00:00:00.000Z,modifiedBy.5fmy6@example.org
+10336115-23b7-41c6-8c6b-a2468c79743d,1033611a-4246-4841-8cb6-fd6a30543b55,2002-12-04,2010-03-30,false,2020-08-03T00:00:00.000Z,createdBy.m5jf@example.net,2018-03-21T00:00:00.000Z,modifiedBy.m5jf@example.org
+1033612c-0f56-4fff-9748-dbbd48cd265b,1033612b-5dbc-4add-87a1-60cbdfb514cd,2018-11-16,2022-10-05,true,2002-12-07T00:00:00.000Z,createdBy.m5jg@example.org,2004-08-14T00:00:00.000Z,modifiedBy.m5jg@example.net
+1033613e-c4b8-4324-b85a-e1168187bab4,10336130-4e54-4ad2-b89b-8f3d53fdb832,2021-08-30,2017-02-12,false,2017-05-12T00:00:00.000Z,createdBy.m5jh@example.net,2020-01-13T00:00:00.000Z,modifiedBy.m5jh@example.org
+10336140-1308-492b-b495-986ad3d27e44,10336147-ebf0-41ac-b4fa-d3441f6db5d6,2005-08-01,2022-11-23,true,2018-06-21T00:00:00.000Z,createdBy.m5ji@example.org,2014-12-14T00:00:00.000Z,modifiedBy.m5ji@example.org
