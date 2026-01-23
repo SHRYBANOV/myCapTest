@@ -1,5 +1,4 @@
 code,name,descr
-N,new,new
 A,assigned,assigned
-H,on_hold,on_hold
 C,closed,closed
+H,on_hold,on_hold

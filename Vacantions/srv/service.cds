@@ -25,6 +25,7 @@ annotate MyService.Employee with @(
             { $Type : 'UI.DataField', Value : isactive, }
 
         ],
+        
         FieldGroup #BasicData : {
             $Type : 'UI.FieldGroupType',
             Data : [
@@ -51,7 +52,7 @@ annotate MyService.EmplManager with @(
         { $Type: 'UI.DataField', Value: 'validto' }, 
         { $Type: 'UI.DataField', Value: 'isprimary' }
     ],
-    FieldGroup #BasicData : {
+    FieldGroup #BasicData2 : {
         $Type : 'UI.FieldGroupType',
         Data : [
         { $Type : 'UI.DataField', Value : createdAt, },
@@ -61,7 +62,7 @@ annotate MyService.EmplManager with @(
     ],},
     //facets
     Facets  : [
-        { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', } 
+        { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData2', } 
     ],
     }
     );
@@ -74,7 +75,7 @@ annotate MyService.Vacbalances with @(
         { $Type: 'UI.DataField', Value: 'useddays' },
         { $Type: 'UI.DataField', Value: 'remainingdays' }
     ],
-    FieldGroup #BasicData : {
+    FieldGroup #BasicData3 : {
         $Type : 'UI.FieldGroupType',
         Data : [
         { $Type : 'UI.DataField', Value : createdAt, },
@@ -84,7 +85,7 @@ annotate MyService.Vacbalances with @(
     ],},
     //facets
     Facets  : [
-        { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', } 
+        { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData3', } 
     ],
     }
 );
@@ -97,7 +98,7 @@ annotate MyService.VacRequest with @(
         { $Type: 'UI.DataField', Value: 'status' },
         { $Type: 'UI.DataField', Value: 'reason' }
     ],
-    FieldGroup #BasicData : {
+    FieldGroup #BasicData4 : {
         $Type : 'UI.FieldGroupType',
         Data : [
         { $Type : 'UI.DataField', Value : createdAt, },
@@ -107,6 +108,6 @@ annotate MyService.VacRequest with @(
     ],},
     //facets
     Facets  : [
-        { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData', } 
+        { $Type : 'UI.ReferenceFacet', Target : '@UI.FieldGroup#BasicData4', } 
     ],
     });
