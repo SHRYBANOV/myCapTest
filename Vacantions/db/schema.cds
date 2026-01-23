@@ -60,7 +60,7 @@ entity EmplManager: cuid, managed {
 entity Vacbalances : cuid, managed {
   vbal          : UUID not null;
   employee      : Association to many Employee on employee.vacbalances = $self;
-  vacationtype  : Association to VacType default 'N';
+  vacationtype  : Association to VacType;
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
   useddays      : ze_useddays;
@@ -69,9 +69,9 @@ entity Vacbalances : cuid, managed {
 entity VacRequest : cuid, managed {
   req          : UUID not null;
   employee     : Association to many Employee on employee.vacrequest = $self;
-  vacationtype : Association to VacType default 'N';
+  vacationtype : Association to VacType;
   startdate    : ze_startdate;
   enddate      : ze_enddate;
-  status       : Association to Status default 'N';
+  status       : Association to Status;
   reason       : ze_reason;
 }
