@@ -18,29 +18,33 @@ type  ze_startdate: Date;
 type  ze_enddate: Date;
 type  ze_reason: String(255);
 
-entity Status : CodeList {
+/*entity Status : CodeList {
 key code: String enum {
-    new = 'N';
+    draft = 'D';
     assigned = 'A'; 
     in_process = 'I'; 
     on_hold = 'H'; 
     resolved = 'R'; 
     closed = 'C'; 
+}};*/
+entity Status : CodeList {
+key code: String enum {
+    status1 = 'D';
+    status2 = 'A'; 
+    status3 = 'I'; 
+    status4 = 'H';
 }};
 entity VacType : CodeList {
 key code: String enum {
-    new = 'N';
-    assigned = 'A'; 
-    in_process = 'I'; 
-    on_hold = 'H'; 
-    resolved = 'R'; 
-    closed = 'C'; 
+    type1 = 'N';
+    type2 = 'A'; 
+    type3 = 'C'; 
 }};
 entity Employee : cuid, managed {
-  key employeeid     : UUID not null;
-  emplmanager    : Association to many EmplManager on emplmanager.employee = $self;
-  vacbalances    : Association to many Vacbalances on vacbalances.employee = $self;
-  vacrequest     : Association to many VacRequest on vacrequest.employee = $self;
+  employeeid     : String(10);
+  emplmanager    : Composition of many EmplManager on emplmanager.employee = $self;
+  vacbalances    : Composition of many Vacbalances on vacbalances.employee = $self;
+  vacrequest     : Composition of many VacRequest on vacrequest.employee = $self;
   firstname      : ze_firstname;
   lastname       : ze_lastname;
   email          : ze_email;
@@ -51,14 +55,14 @@ entity Employee : cuid, managed {
   isactive       : abap_boolean;
 }
 entity EmplManager: cuid, managed {
-  managerid     : UUID not null;
+  managerid     : String(10);
   employee      : Association to Employee;
   validfrom     : ze_validfrom;
   validto       : ze_validto;
   isprimary     : ze_isprimary;
 }
 entity Vacbalances : cuid, managed {
-  vbal          : UUID not null;
+  vbal          : String(10);
   employee      : Association to Employee;
   vacationtype  : Association to VacType;
   zyear         : String(4);
@@ -67,11 +71,11 @@ entity Vacbalances : cuid, managed {
   remainingdays : ze_remainingdays = entitleddays - useddays;
 }
 entity VacRequest : cuid, managed {
-  req          : UUID not null;
+  req          : String(10);
   employee     : Association to Employee;
-  vacationtype : Association to VacType;
   startdate    : ze_startdate;
+  vacationtype : Association to VacType;
   enddate      : ze_enddate;
-  status       : Association to Status;
+  //status       : Association to Status;
   reason       : ze_reason;
 }

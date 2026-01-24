@@ -1,4 +1,4 @@
 code,name,descr
-I,in_process,in_process
-H,on_hold,on_hold
-C,closed,closed
+D,status1,status1
+A,status2,status2
+H,status4,status4

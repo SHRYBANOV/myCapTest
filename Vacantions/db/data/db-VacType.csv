@@ -1,4 +1,3 @@
 code,name,descr
-H,on_hold,on_hold
-N,new,new
-I,in_process,in_process
+N,type1,type1
+C,type3,type3

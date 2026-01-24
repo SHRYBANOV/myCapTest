@@ -12,18 +12,15 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-vacantion1": "cds watch --open vacantion1/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-vacantion2": "cds watch --open vacantion2/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-vacantion1": "cds watch --open vacantion1/index.html?sap-ui-xx-viewCache=false --livereload false"
+
   },
   "private": true,
   "workspaces": [
     "app/*"
   ],
   "sapux": [
-    "app/vacantion1",
-    "app/vacantion2",
-    "app/vacantion1",
-    "app/vacantion1"
+
   ],
   "main": "index.js",
   "author": "",
