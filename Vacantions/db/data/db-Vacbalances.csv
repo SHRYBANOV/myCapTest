@@ -1,3 +1,0 @@
-ID,vbal,employee_ID,vacationtype_code,zyear,entitleddays,useddays,createdAt,createdBy,modifiedAt,modifiedBy
-29451513-aa7c-43e4-a5fc-d88810bca84b,l-29451513,4014374d-269a-4966-b442-f77d70993fd0,N,1513,352.11,243.23,2010-07-01T00:00:00.000Z,createdBy.hj8xl@example.com,2013-04-06T00:00:00.000Z,modifiedBy.hj8xl@example.org
-29451514-b5e3-4705-bc26-712cd18395e5,l-29451514,4014374d-269a-4966-b442-f77d70993fd0,N,1514,448.51,0.85,2003-01-09T00:00:00.000Z,createdBy.hj8xm@example.com,2019-01-26T00:00:00.000Z,modifiedBy.hj8xm@example.com

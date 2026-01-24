@@ -1,3 +1,0 @@
-ID,managerid,employee_ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
-15861985-4304-4af7-bbed-591b8b2d0df0,d-15861985,4014374d-269a-4966-b442-f77d70993fd0,2014-03-03,2017-04-15,false,2021-03-09T00:00:00.000Z,createdBy.9fz6p@example.net,2012-06-28T00:00:00.000Z,modifiedBy.9fz6p@example.org
-15861986-ea32-4b35-9b38-eff989154764,d-15861986,4014374d-269a-4966-b442-f77d70993fd0,2018-12-10,2011-02-13,true,2004-11-22T00:00:00.000Z,createdBy.9fz6q@example.org,2002-05-16T00:00:00.000Z,modifiedBy.9fz6q@example.org

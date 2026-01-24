@@ -25,7 +25,7 @@ annotate MyService.Employee with @UI: { headerInfo: {
     },
 }};
 annotate MyService.Employee with { ID @UI.Hidden };
-annotate MyService.Employee with @UI.Identification: [ 
+/*annotate MyService.Employee with @UI.Identification: [ 
     { $Type : 'UI.DataField', Value : firstname, }, 
     { $Type : 'UI.DataField', Value : lastname, }, 
     { $Type : 'UI.DataField', Value : email, },  
@@ -34,7 +34,7 @@ annotate MyService.Employee with @UI.Identification: [
     { $Type : 'UI.DataField', Value : zposition,  }, 
     { $Type : 'UI.DataField', Value : department, }, 
     { $Type : 'UI.DataField', Value : isactive, }
-    ];
+    ];*/
 annotate MyService.Employee with {
     firstname @title : 'First Name';
     lastname @title : 'Last Name';
@@ -108,14 +108,16 @@ annotate MyService.EmplManager with @UI.Facets  : [
 
 
 annotate MyService.Vacbalances with @UI.LineItem: [
-        { $Type: 'UI.DataField', Value: 'vacationtype' },
-        { $Type: 'UI.DataField', Value: 'zyear' },
-        { $Type: 'UI.DataField', Value: 'entitleddays' },
-        { $Type: 'UI.DataField', Value: 'useddays' },
-        { $Type: 'UI.DataField', Value: 'remainingdays' }
-    ];
+    { $Type: 'UI.DataField', Value: 'vbal' },
+    { $Type: 'UI.DataField', Value: 'vacationtype' },
+    { $Type: 'UI.DataField', Value: 'zyear' },
+    { $Type: 'UI.DataField', Value: 'entitleddays' },
+    { $Type: 'UI.DataField', Value: 'useddays' },
+    { $Type: 'UI.DataField', Value: 'remainingdays' }
+];
 annotate MyService.Vacbalances with @UI.FieldGroup #Main: {
     $Type : 'UI.FieldGroupType', Data : [
+        { $Type: 'UI.DataField', Value: 'vbal' },
         { $Type: 'UI.DataField', Value: 'vacationtype' },
         { $Type: 'UI.DataField', Value: 'zyear' },
         { $Type: 'UI.DataField', Value: 'entitleddays' },
