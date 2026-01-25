@@ -9,9 +9,7 @@ service MyService {
    // @odata.draft.enabled
     entity VacRequest as projection on db.VacRequest;
     entity VacType as projection on db.VacType;
-    @readonly
-    @CDS.odata.valuelist
-    entity Status as projection on db.Status;
+    entity Status as projection on db.Status1;
 }
 
 annotate MyService.Employee with @UI: { headerInfo: { 
@@ -42,28 +40,31 @@ annotate MyService.Employee with {
     zposition @title : 'Position';
     department @title : 'Department';
     isactive @title : 'Active Status';
+    status @title : 'Status';
 };
 
 annotate MyService.Employee with @UI.LineItem:[
-    { $Type : 'UI.DataField', Value : firstname, }, 
-    { $Type : 'UI.DataField', Value : lastname, }, 
-    { $Type : 'UI.DataField', Value : email, },  
-    { $Type : 'UI.DataField', Value : phone, }, 
-    { $Type : 'UI.DataField', Value : hiredate, }, 
-    { $Type : 'UI.DataField', Value : zposition,  }, 
-    { $Type : 'UI.DataField', Value : department, }, 
-    { $Type : 'UI.DataField', Value : isactive, }
+    { $Type : 'UI.DataField', Value : firstname }, 
+    { $Type : 'UI.DataField', Value : lastname }, 
+    { $Type : 'UI.DataField', Value : email },  
+    { $Type : 'UI.DataField', Value : phone }, 
+    { $Type : 'UI.DataField', Value : hiredate }, 
+    { $Type : 'UI.DataField', Value : zposition  }, 
+    { $Type : 'UI.DataField', Value : department }, 
+    { $Type : 'UI.DataField', Value : isactive },
+    { $Type : 'UI.DataField', Value : status }
     ];
 annotate MyService.Employee with @UI.FieldGroup #Main : {
     $Type : 'UI.FieldGroupType', Data : [
-    { $Type : 'UI.DataField', Value : firstname, }, 
-    { $Type : 'UI.DataField', Value : lastname, }, 
-    { $Type : 'UI.DataField', Value : email, },  
-    { $Type : 'UI.DataField', Value : phone, }, 
-    { $Type : 'UI.DataField', Value : hiredate, }, 
-    { $Type : 'UI.DataField', Value : zposition,  }, 
-    { $Type : 'UI.DataField', Value : department, }, 
-    { $Type : 'UI.DataField', Value : isactive, }
+    { $Type : 'UI.DataField', Value : firstname }, 
+    { $Type : 'UI.DataField', Value : lastname }, 
+    { $Type : 'UI.DataField', Value : email },  
+    { $Type : 'UI.DataField', Value : phone }, 
+    { $Type : 'UI.DataField', Value : hiredate,}, 
+    { $Type : 'UI.DataField', Value : zposition  }, 
+    { $Type : 'UI.DataField', Value : department }, 
+    { $Type : 'UI.DataField', Value : isactive },
+    { $Type : 'UI.DataField', Value : status }
     ]
 }; 
 //facets -----
@@ -131,7 +132,7 @@ annotate MyService.VacRequest with @UI.LineItem: [
         { $Type: 'UI.DataField', Value: 'vacationtype' },
         { $Type: 'UI.DataField', Value: 'startdate' },
         { $Type: 'UI.DataField', Value: 'enddate' },
-       // { $Type: 'UI.DataField', Value: 'status' },
+        //{ $Type: 'UI.DataField', Value: 'status' },
         { $Type: 'UI.DataField', Value: 'reason' }
     ];
 annotate MyService.VacRequest with @UI.FieldGroup #Main: {

@@ -19,7 +19,7 @@ type  ze_enddate: Date;
 type  ze_reason: String(255);
 
 entity Status : CodeList {
-key code: String enum {
+key code: String(1) enum {
     status1 = 'D';
     status2 = 'A'; 
     status3 = 'L'; 
@@ -29,13 +29,11 @@ criticality : Integer;
 displayText : String;
 };
 entity VacType : CodeList {
-key code: String enum {
+key code: String(1) enum {
     type1 = 'N';
     type2 = 'A'; 
     type3 = 'C'; 
-};
-criticality : Integer;
-displayText : String;
+}
 };
 entity Employee : cuid, managed {
   employeeid     : String(10);
@@ -50,6 +48,7 @@ entity Employee : cuid, managed {
   zposition      : ze_position;
   department     : ze_department;
   isactive       : abap_boolean;
+  status1         : Association to Status;
 }
 entity EmplManager: cuid, managed {
   managerid     : String(10);

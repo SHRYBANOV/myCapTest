@@ -1,3 +1,0 @@
-ID,req,employee_ID,startdate,vacationtype_code,enddate,reason,createdAt,createdBy,modifiedAt,modifiedBy
-13528406-5ee1-4cad-83d7-39801e41041b,q-13528406,46311087-b08d-40f7-9ada-b40fa1365c7f,2015-10-01,N,2020-05-31,reason-13528406,2017-05-30T00:00:00.000Z,createdBy.81yl2@example.com,2002-03-28T00:00:00.000Z,modifiedBy.81yl2@example.com
-13528407-fe25-4373-82ec-d39ab16c6146,q-13528407,46311087-b08d-40f7-9ada-b40fa1365c7f,2012-09-15,N,2019-09-18,reason-13528407,2015-02-19T00:00:00.000Z,createdBy.81yl3@example.com,2013-02-07T00:00:00.000Z,modifiedBy.81yl3@example.net
