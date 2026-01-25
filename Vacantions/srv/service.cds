@@ -8,8 +8,6 @@ service MyService {
     entity Vacbalances as projection on db.Vacbalances;
    // @odata.draft.enabled
     entity VacRequest as projection on db.VacRequest;
-    @readonly
-    @CDS.odata.valuelist
     entity VacType as projection on db.VacType;
     @readonly
     @CDS.odata.valuelist
@@ -118,7 +116,7 @@ annotate MyService.Vacbalances with @UI.LineItem: [
 annotate MyService.Vacbalances with @UI.FieldGroup #Main: {
     $Type : 'UI.FieldGroupType', Data : [
         { $Type: 'UI.DataField', Value: 'vbal' },
-        { $Type: 'UI.DataField', Value: 'vacationtype' },
+        { $Type: 'UI.DataField', Value: 'vacationtype', },
         { $Type: 'UI.DataField', Value: 'zyear' },
         { $Type: 'UI.DataField', Value: 'entitleddays' },
         { $Type: 'UI.DataField', Value: 'useddays' },

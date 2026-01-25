@@ -18,28 +18,25 @@ type  ze_startdate: Date;
 type  ze_enddate: Date;
 type  ze_reason: String(255);
 
-/*entity Status : CodeList {
-key code: String enum {
-    draft = 'D';
-    assigned = 'A'; 
-    in_process = 'I'; 
-    on_hold = 'H'; 
-    resolved = 'R'; 
-    closed = 'C'; 
-}};*/
 entity Status : CodeList {
 key code: String enum {
     status1 = 'D';
     status2 = 'A'; 
-    status3 = 'I'; 
-    status4 = 'H';
-}};
+    status3 = 'L'; 
+    status4 = 'U';
+};
+criticality : Integer;
+displayText : String;
+};
 entity VacType : CodeList {
 key code: String enum {
     type1 = 'N';
     type2 = 'A'; 
     type3 = 'C'; 
-}};
+};
+criticality : Integer;
+displayText : String;
+};
 entity Employee : cuid, managed {
   employeeid     : String(10);
   emplmanager    : Composition of many EmplManager on emplmanager.employee = $self;
@@ -64,7 +61,7 @@ entity EmplManager: cuid, managed {
 entity Vacbalances : cuid, managed {
   vbal          : String(10);
   employee      : Association to Employee;
-  vacationtype  : Association to VacType;
+  vacationtype : Association to VacType;
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
   useddays      : ze_useddays;
