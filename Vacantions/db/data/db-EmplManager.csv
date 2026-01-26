@@ -1,0 +1,3 @@
+ID,managerid,employee_ID,validfrom,validto,isprimary,createdAt,createdBy,modifiedAt,modifiedBy
+33422390-8b5c-44ae-9c13-e0651190e2c0,id-3342239,29571848-c6ea-4bc5-abc4-8b5574da7efb,2018-06-25,2005-11-01,false,2009-03-11T00:00:00.000Z,createdBy.1zmvz@example.org,2010-06-25T00:00:00.000Z,modifiedBy.1zmvz@example.com
+33422409-cc23-41cf-a25e-af1d0d932340,id-3342240,29571848-c6ea-4bc5-abc4-8b5574da7efb,2016-02-29,2011-04-08,true,2004-06-05T00:00:00.000Z,createdBy.1zmw0@example.net,2021-12-01T00:00:00.000Z,modifiedBy.1zmw0@example.org
