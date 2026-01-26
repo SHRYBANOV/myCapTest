@@ -48,7 +48,7 @@ entity Employee : cuid, managed {
   zposition      : ze_position;
   department     : ze_department;
   isactive       : abap_boolean;
-  status1         : Association to Status;
+  status         : Association to Status;
 }
 entity EmplManager: cuid, managed {
   managerid     : String(10);
@@ -60,7 +60,7 @@ entity EmplManager: cuid, managed {
 entity Vacbalances : cuid, managed {
   vbal          : String(10);
   employee      : Association to Employee;
-  vacationtype : Association to VacType;
+  //vacationtype : Association to VacType;
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
   useddays      : ze_useddays;
@@ -70,7 +70,7 @@ entity VacRequest : cuid, managed {
   req          : String(10);
   employee     : Association to Employee;
   startdate    : ze_startdate;
-  vacationtype : Association to VacType;
+  //vacationtype : Association to VacType;
   enddate      : ze_enddate;
   //status       : Association to Status;
   reason       : ze_reason;
