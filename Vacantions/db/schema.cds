@@ -22,9 +22,9 @@ entity Status : CodeList {
 key code: String(1) enum {
     status1 = 'D';
     status2 = 'A'; 
-    status3 = 'L'; 
-    status4 = 'U';
-};
+    status3 = 'B'; 
+    status4 = 'C';
+}
 criticality : Integer;
 displayText : String;
 };
@@ -60,7 +60,7 @@ entity EmplManager: cuid, managed {
 entity Vacbalances : cuid, managed {
   vbal          : String(10);
   employee      : Association to Employee;
-  //vacationtype : Association to VacType;
+  vacationtype  : Association to VacType;
   zyear         : String(4);
   entitleddays  : ze_entitleddays;
   useddays      : ze_useddays;
@@ -70,8 +70,8 @@ entity VacRequest : cuid, managed {
   req          : String(10);
   employee     : Association to Employee;
   startdate    : ze_startdate;
-  //vacationtype : Association to VacType;
+  vacationtype : Association to VacType;
   enddate      : ze_enddate;
-  //status       : Association to Status;
+  status       : Association to Status;
   reason       : ze_reason;
 }
