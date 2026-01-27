@@ -46,12 +46,31 @@ annotate service.Employee with @(
             Value : status_code,
             Label : 'Status',
             Criticality : status.criticality,
-            CriticalityRepresentation : #WithIcon,
         },
     ]
 );
 
 annotate service.Employee with {
-    status @Common.Text : status.displayText
+    status @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Status',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : status_code,
+                    ValueListProperty : 'code',
+                },
+            ],
+            Label : 'Status',
+        },
+        Common.Text : status.displayText,
+    )
 };
+
+annotate service.Status with {
+    code @(
+        Common.Text : displayText,
+        Common.Text.@UI.TextArrangement : #TextLast,
+)};
 

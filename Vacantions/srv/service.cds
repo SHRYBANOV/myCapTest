@@ -21,6 +21,7 @@ annotate MyService.Employee with @UI.headerInfo: {
     },
 };
 annotate MyService.Employee with { ID @UI.Hidden };
+annotate MyService.Employee with { status @Common.ValueListWithFixedValues : true };
 annotate MyService.Employee with @UI.Identification: [ 
     { $Type : 'UI.DataField', Value : firstname, }, 
     { $Type : 'UI.DataField', Value : lastname, }, 
