@@ -3,6 +3,12 @@ annotate service.Employee with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
+            Value : status_code,
+            Label : 'Status',
+            Criticality : status.criticality,
+        },
+        {
+            $Type : 'UI.DataField',
             Value : firstname,
             Label : 'First Name',
         },
@@ -42,17 +48,54 @@ annotate service.Employee with @(
             Label : 'Active Status',
         },
         {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'MyService.changeStatus',
+            Label : 'changeStatus',
+        },
+    ],
+    UI.Identification : [
+        {
+            $Type : 'UI.DataField',
+            Value : firstname,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : lastname,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : email,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : phone,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : hiredate,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : zposition,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : department,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : isactive,
+        },
+        {
             $Type : 'UI.DataField',
             Value : status_code,
-            Label : 'Status',
-            Criticality : status.criticality,
         },
         {
             $Type : 'UI.DataFieldForAction',
             Action : 'MyService.changeStatus',
             Label : 'changeStatus',
         },
-    ]
+    ],
 );
 
 annotate service.Employee with {

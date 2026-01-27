@@ -3,6 +3,7 @@ service MyService {
     @odata.draft.enabled
     entity Employee as projection on db.Employee
         actions {
+            @(Common.SideEffects: {TargetProperties: ['status_code']})
             action changeStatus(@(Common : {
             ValueListWithFixedValues : true,
             ValueList : {
