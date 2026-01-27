@@ -1,4 +1,5 @@
 using { cuid, managed, sap.common.CodeList } from '@sap/cds/common';
+using { Attachments } from '@cap-js/attachments';
 namespace db;
 
 type  ze_firstname : String(100);
@@ -49,6 +50,7 @@ entity Employee : cuid, managed {
   department     : ze_department;
   isactive       : abap_boolean;
   status         : Association to Status;
+  attachments    : Composition of many Attachments;
 }
 entity EmplManager: cuid, managed {
   managerid     : String(10);
