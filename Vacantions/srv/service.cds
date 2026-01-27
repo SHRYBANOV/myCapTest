@@ -1,7 +1,23 @@
 using { db } from '../db/schema';
 service MyService {
     @odata.draft.enabled
-    entity Employee as projection on db.Employee;
+    entity Employee as projection on db.Employee
+        actions {
+            action changeStatus(@(Common : {
+            ValueListWithFixedValues : true,
+            ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Status',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : status_code,
+                    ValueListProperty : 'code',
+                },
+            ] },
+            },)
+        newStatus : String )
+        };
    // @odata.draft.enabled
     entity EmplManager as projection on db.EmplManager;
    // @odata.draft.enabled

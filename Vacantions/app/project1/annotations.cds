@@ -47,6 +47,11 @@ annotate service.Employee with @(
             Label : 'Status',
             Criticality : status.criticality,
         },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'MyService.changeStatus',
+            Label : 'changeStatus',
+        },
     ]
 );
 

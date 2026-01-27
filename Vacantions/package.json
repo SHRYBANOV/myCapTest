@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
-    "cds-plugin-ui5": "^0.13.0"
+    "cds-plugin-ui5": "^0.13.0",
+    "@cap-js/cds-typer": ">=0.1"
   },
   "scripts": {
     "start": "cds-serve",
@@ -29,5 +30,8 @@
   ],
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  }
 }
