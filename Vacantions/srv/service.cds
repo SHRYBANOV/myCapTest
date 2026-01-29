@@ -2,7 +2,7 @@ using { db } from '../db/schema';
 service MyService {
     @odata.draft.enabled
    // @(requires : 'admin')
-   //@( restrict : [ { grant : ['READ','WRITE'], to : 'admin' } ] )
+   @( restrict : [ { grant : ['READ','WRITE'], to : 'admin' } ] )
     entity Employee as projection on db.Employee
         actions {
             @(Common.SideEffects: {TargetProperties: ['status_code']})

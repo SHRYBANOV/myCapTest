@@ -37,12 +37,8 @@
     "app/*"
   ],
   "sapux": [
-    "app/vacantion1",
-    "app/vacantion1",
-    "app/project1",
-    "app/project1",
-    "app/project1",
     "app/project1"
+
   ],
   "main": "index.js",
   "author": "",
