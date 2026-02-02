@@ -1,2 +1,2 @@
 GET http://localhost:4010/odata/v4/my/Employee
-Authorization: Basic YWxpY2U6MTIz
+Authorization: Basic YWxpY2UgMTIz
